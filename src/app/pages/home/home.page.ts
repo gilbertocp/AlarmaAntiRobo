@@ -19,8 +19,7 @@ export class HomePage implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  toggleAlarm(e: Event): void {
-    console.log(e);
-    
+  toggleAlarm(e: any): void {
+    const state = e.target.getAttribute('data-state');
   }
 }

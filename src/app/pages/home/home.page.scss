@@ -1,15 +1,14 @@
-.alarmaBtn {
-  height: 100vh;
-  text-align: center;
-  font-size: 26px;
+.alarma {
+  height: 100%;
+  font-size: 30px;
+}
+
+.alarma__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__title {
   text-align: center;
-}
-
-.header__img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

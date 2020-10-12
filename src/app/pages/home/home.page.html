@@ -1,4 +1,3 @@
-<ion-content color="primary">
   <ion-header class="header">
     <ion-header class="ion-no-border">
       <ion-toolbar color="primary">
@@ -11,11 +10,11 @@
     </ion-header>
 </ion-header>
 
-<ion-content>
-  <ion-button size="full" color="primary" class="alarmaBtn" (click)="toggleAlarm($event)">
-    <ion-text color="light">
-      Pulse para <br> activar alarma
-      <ion-icon name="alert-circle-outline"></ion-icon>
+<ion-content color="primary">
+  <ion-button #btnAlarm size="full" color="primary" class="alarma" data-state="deactivated" (click)="toggleAlarm($event)">
+    <ion-text color="light" id="alarma__text">
+      <div>Pulse para <br> activar alarma</div>
+      <ion-icon name="lock-open" size="large"></ion-icon>
     </ion-text>
   </ion-button>
 </ion-content>
