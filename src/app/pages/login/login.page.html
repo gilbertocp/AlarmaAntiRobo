@@ -1,0 +1,58 @@
+<ion-content color="primary">
+  <ion-header class="header">
+    <ion-header class="ion-no-border">
+      <ion-toolbar color="primary">
+        <ion-title>
+          <ion-grid>
+            <div id="login-title">
+              <ion-text color="light">Alarma Anti-Robo App</ion-text> &nbsp;
+              <img src="/assets/icon.png" alt="" width="25" height="25">
+            </div>
+          </ion-grid>
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+  </ion-header>
+
+  <ion-card class="login">
+    <div class="login__img">
+      <img [src]="'/assets/icon.png'" width="150" height="150"/>
+    </div>
+
+    <ion-card-content>
+      <form (ngSubmit)="onLogin()">
+        <ion-item>
+          <ion-label>
+            <ion-icon name="mail-outline"></ion-icon>
+          </ion-label>
+          <ion-input type="email" [(ngModel)]="email" name="email" id="email" placeholder="Email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <ion-icon name="key-outline"></ion-icon>
+          </ion-label>
+          <ion-input type="password" [(ngModel)]="password" name="password" id="password" placeholder="Clave"></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" type="submit" id="submitBtn">
+          <ion-spinner name="circles" *ngIf="spinner"></ion-spinner> &nbsp;
+          <ion-text color="light">{{!spinner ? 'Iniciar Sesión': 'Cargando'}}</ion-text>
+        </ion-button>
+
+        <ion-item>
+          <ion-label>Ingreso Rápido</ion-label>
+          <ion-select id="" value="---" (ionChange)="usuarioSeleccionado($event)">
+            <ion-select-option disabled value="---">Selecionar</ion-select-option>
+            <ion-select-option value="administrador">Administrador</ion-select-option>
+            <ion-select-option value="invitado">Invitado</ion-select-option>
+            <ion-select-option value="tester">Tester</ion-select-option>
+            <ion-select-option value="usuario">Usuario</ion-select-option>
+            <ion-select-option value="anonimo">Anonimo</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

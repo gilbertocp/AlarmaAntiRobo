@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyCnjtezioyH3JSKG_vRhv_-g9_ej7mdpLY",
+    authDomain: "alarmaroboapp.firebaseapp.com",
+    databaseURL: "https://alarmaroboapp.firebaseio.com",
+    projectId: "alarmaroboapp",
+    storageBucket: "alarmaroboapp.appspot.com",
+    messagingSenderId: "1021831927704",
+    appId: "1:1021831927704:web:2db3a2ddfc5194f57d3ded"
+  }
 };
 
 /*

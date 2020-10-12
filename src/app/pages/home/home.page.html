@@ -1,0 +1,21 @@
+<ion-content color="primary">
+  <ion-header class="header">
+    <ion-header class="ion-no-border">
+      <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-button (click)="logout()">
+            <ion-icon name="log-out-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+</ion-header>
+
+<ion-content>
+  <ion-button size="full" color="primary" class="alarmaBtn" (click)="toggleAlarm($event)">
+    <ion-text color="light">
+      Pulse para <br> activar alarma
+      <ion-icon name="alert-circle-outline"></ion-icon>
+    </ion-text>
+  </ion-button>
+</ion-content>
