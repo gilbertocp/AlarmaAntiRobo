@@ -3,7 +3,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, of } from 'rxjs';
 import { first, map, switchMap } from 'rxjs/operators';
-import { UserData } from '../classes/User';
 import { User } from 'firebase/app';
 
 @Injectable({
@@ -11,7 +10,7 @@ import { User } from 'firebase/app';
 })
 export class AuthService {
 
-  public user$: Observable<UserData>;
+  public user$: Observable<User>;
 
   constructor(private afAuth: AngularFireAuth, private db: AngularFirestore) { 
     this.user$ = this.afAuth.authState.pipe(
