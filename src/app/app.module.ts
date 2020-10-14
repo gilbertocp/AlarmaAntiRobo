@@ -17,6 +17,10 @@ import { environment } from '../environments/environment';
 
 import { DeviceMotion } from '@ionic-native/device-motion/ngx';
 
+import { Vibration } from '@ionic-native/vibration/ngx';
+
+import { Flashlight } from '@ionic-native/flashlight/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -33,6 +37,8 @@ import { DeviceMotion } from '@ionic-native/device-motion/ngx';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     DeviceMotion,
+    Vibration,
+    Flashlight 
   ],
   bootstrap: [AppComponent]
 })
