@@ -53,7 +53,7 @@ export class HomePage implements OnInit {
 
     this.subscription = this.deviceMotion.watchAcceleration({frequency: 150}).subscribe(data => {
       
-      if( (data.y > 8.9 || data.y < -8.9) &&  Math.round(Math.abs(data.x)) === 0  && Math.round(Math.abs(data.z)) === 0) {
+      if((data.y > 8.9 || data.y < -8.9) &&  Math.round(Math.abs(data.x)) === 0  && Math.round(Math.abs(data.z)) === 0) {
         this.changePosition('vertical');
       }
 
